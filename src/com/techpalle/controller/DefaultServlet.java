@@ -3,6 +3,8 @@ import com.techpalle.dao.CustomerDataAccess;
 import com.techpalle.model.Customer;
 import com.techpalle.util.SuccessPage;
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,6 +30,9 @@ public class DefaultServlet extends HttpServlet {
 			break;
 		case "/reg":
 			getRegistrationPage(request, response);
+			break;
+		case "/res":
+			getDisplayPage(request, response);
 			break;
 		default:
 			getStartUpPage(request, response);
@@ -106,8 +111,18 @@ public class DefaultServlet extends HttpServlet {
 		}
 		catch (IOException | ServletException e) { e.printStackTrace(); }
 	}
+	private void getDisplayPage(HttpServletRequest request, HttpServletResponse response)
+	{
+		try
+		{
+			RequestDispatcher rd = request.getRequestDispatcher("displayresult.jsp");
+			rd.forward(request, response);
+		}
+		catch (IOException | ServletException e) { e.printStackTrace(); }
+	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
 		doGet(request, response);
 	}
+	
 }

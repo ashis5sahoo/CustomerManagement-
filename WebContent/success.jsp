@@ -20,6 +20,7 @@
                     	<p><%= spJsp.para %></p>
                 	</fieldset>
             	</div>
+            	<input type="button" onclick="window.location.href='index.jsp';" value="Home">
             	<div class="footer">
 	                <footer>&#169; <%= spJsp.foot %></footer>
             	</div>
@@ -27,14 +28,16 @@
     	</section>
 	</body>
 	<style>
-		body { background-image: linear-gradient(45deg, #46646e, #236b8f); font-family: verdana; background-size: cover; background-attachment: fixed; }
+		* { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #afafaf; font-family: verdana; background-size: cover; background-attachment: fixed; }
 		section { width: 100%; height: 100vh; display: flex ; justify-content: center; align-items: center; }
-		section aside { background-image: linear-gradient(180deg, #011c25, #273942); padding: 1.5%; width: 60%; border-radius: 3px; box-shadow: 0 5px 8px 0 #00000080; }
-		.header { overflow: visible; background-image: linear-gradient(45deg, #46646e, #236b8f); border-radius: 3px; padding: 0.002vw; }
-		.header h1 {font-size: 25px; font-weight: bold; color: #e9e9e9; text-align: center; text-decoration: none; padding: 5px; text-shadow: -2px 2px 4px #000000; }
+		section aside { background-color: #3b3b3b; margin: 0 auto; padding: 1.5%; width: 55%; border-radius: 3px; box-shadow: 0 5px 8px 0 #000000; }
+		.header { background-color: #cfcfcf; border-radius: 8px; padding: 15px; }
+		.header h1 { font-size: 25px; font-weight: bold; color: #0c0c0c; text-align: center; text-decoration: none; }
 		fieldset { margin: 5% 15% 0 15%; }
-		p {text-align: center; color: #e9e9e9; font-size: medium; }
-		legend { margin-left: calc(50% - 35px - 8px); color: #e9e9e9; font-weight: bold; font-size: large; }
-		.footer { margin: 7% 0 0 0; color: #e9e9e9; background-image: linear-gradient(45deg, #46646e, #236b8f); text-align: center; padding: 3px; border-radius: 3px; text-shadow: -2px 2px 4px #000000; }
+		p { color: #e9e9e9; padding: 3px; text-align: center; }
+		legend { margin-left: calc(50% - 28px - 8px); color: #e9e9e9; font-weight: bold; }
+		input[type=button]  { margin: 4% 0 0 45%; width: fit-content; font-weight: bold; border: none; color: #0c0c0c; background-color: #cfcfcf; padding: 4px;font-size: 18px; border-radius: 3px; cursor: pointer; }
+		.footer { margin: 7% 0 0 0; color: #0c0c0c; background-color: #cfcfcf; text-align: center; padding: 3px; border-radius: 3px; }
 	</style>
 </html>
